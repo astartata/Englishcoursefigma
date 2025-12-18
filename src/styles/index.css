@@ -1,3 +1,39 @@
-@import './fonts.css';
-@import './tailwind.css';
-@import './theme.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 50% 10%;
+    --foreground: 0 0% 100%;
+  }
+  .dark {
+    --background: 230 50% 6%;
+    --foreground: 0 0% 100%;
+  }
+}
+
+body {
+  background-color: #0a0e27; /* Тот самый темно-синий */
+  color: white;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Стили для карточек */
+.card-gradient {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(20, 184, 166, 0.5);
+  border-radius: 12px;
+}
+
+/* Золотистая кнопка */
+.cta-button {
+  background: linear-gradient(90deg, #14b8a6, #f59e0b);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
