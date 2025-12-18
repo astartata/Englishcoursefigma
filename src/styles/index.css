@@ -5,28 +5,34 @@
 body {
   background-color: #0a0e27 !important;
   color: white !important;
-  font-family: sans-serif;
-  padding: 20px;
+  margin: 0;
+  padding: 40px 20px;
 }
 
-/* Оформление заголовков */
-h1, h2 { color: #f59e0b; margin-top: 30px; }
+/* Сетка для карточек (2 в ряд на ПК) */
+section div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-/* ТЕ САМЫЕ КАРТОЧКИ С РАМКАМИ (как на втором скрине) */
-div[class*="group"], .card, section > div > div {
+/* Сами карточки (как на вашем макете) */
+div[class*="group"], .card, [role="region"] > div > div {
+  flex: 1 1 45%;
   background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(20, 184, 166, 0.3) !important;
-  border-radius: 12px !important;
-  padding: 20px !important;
-  margin: 10px 0 !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  min-width: 300px;
 }
 
-/* Кнопка записи */
+/* Кнопка */
 button, .cta-button {
   background: linear-gradient(90deg, #14b8a6, #f59e0b) !important;
-  color: black !important;
-  border-radius: 50px !important;
-  padding: 12px 30px !important;
+  color: #000 !important;
   font-weight: bold;
+  padding: 14px 32px;
+  border-radius: 50px;
   border: none;
+  cursor: pointer;
 }
