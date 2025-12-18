@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './app/App'
 import './styles/index.css'
 
-// 🔧 ВКЛЮЧАЕМ ТЁМНУЮ ТЕМУ (Figma Make / Tailwind ожидают этот класс)
+// Включаем темную тему для Tailwind
 document.documentElement.classList.add('dark')
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
