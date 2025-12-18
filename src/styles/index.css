@@ -10,43 +10,44 @@ body {
 }
 
 #root {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
-/* ЗАГОЛОВКИ: они будут стоять отдельно над карточками */
-h2, .section-title {
-  width: 100% !important;
+/* ЗАГОЛОВКИ СЕКЦИЙ — стоят отдельно над карточками */
+h2, .section-header {
+  grid-column: 1 / -1 !important; /* Занимает всю ширину */
   color: #f59e0b !important;
-  font-size: 1.8rem;
   margin: 40px 0 20px 0 !important;
-  grid-column: 1 / -1; /* Заставляет заголовок занимать всю ширину в сетке */
+  width: 100%;
 }
 
-/* СЕТКА: Настраиваем так, чтобы заголовки не попадали в карточки */
+/* СЕТКА — расставляет карточки в ряд */
 section, .grid-container {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important;
-  gap: 20px !important;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  gap: 24px !important;
+  align-items: stretch;
 }
 
-/* КАРТОЧКИ: теперь в них будет только основной контент */
+/* КАРТОЧКИ — аккуратные блоки с рамками */
 div[class*="group"], .card, section > div > div {
   background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(20, 184, 166, 0.25) !important;
+  border: 1px solid rgba(20, 184, 166, 0.2) !important;
   border-radius: 16px !important;
   padding: 24px !important;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Кнопка */
+/* КНОПКА */
 button, .cta-button {
   background: linear-gradient(90deg, #14b8a6, #f59e0b) !important;
   color: black !important;
   font-weight: bold;
-  padding: 12px 30px;
+  padding: 12px 32px;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
 }
