@@ -5,27 +5,27 @@
 body {
   background-color: #0a0e27 !important;
   color: white !important;
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  font-family: sans-serif;
+  padding: 20px;
 }
 
-/* Контейнер для центрирования всего сайта */
+/* Контейнер для центрирования сайта */
 #root {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
 }
 
-/* СЕТКА: Делаем карточки в ряд (2 колонки) */
+/* Делаем карточки в ряд (сетка) */
 section > div, 
-div[class*="grid"] {
+.grid {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
   gap: 20px !important;
   margin-top: 20px;
 }
 
-/* САМИ КАРТОЧКИ: Рамки и фон */
+/* Оформление самих карточек */
 div[class*="group"], 
 .card, 
 section > div > div {
@@ -35,7 +35,7 @@ section > div > div {
   padding: 24px !important;
 }
 
-/* КНОПКА: Наводим блеск */
+/* Кнопка */
 button, .cta-button {
   background: linear-gradient(90deg, #14b8a6, #f59e0b) !important;
   color: black !important;
@@ -43,5 +43,4 @@ button, .cta-button {
   padding: 12px 30px;
   border-radius: 50px;
   border: none;
-  cursor: pointer;
 }
