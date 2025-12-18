@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  // корректно для GitHub Pages + автогенерации
+  // корректно для GitHub Pages + Figma Make
   base: './',
 
   plugins: [react()],
@@ -16,7 +16,7 @@ export default defineConfig({
 
   build: {
     outDir: 'dist',
-    target: 'esnext',
     emptyOutDir: true,
+    target: 'esnext',
   },
 })
