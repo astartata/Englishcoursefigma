@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc'
 import path from 'path'
 
 export default defineConfig({
-  // Убедитесь, что название репозитория в ссылке совпадает с этим:
+  // Проверьте, что имя репозитория в ссылке совпадает с этим:
   base: '/Englishcoursefigma/',
   plugins: [react()],
   resolve: {
