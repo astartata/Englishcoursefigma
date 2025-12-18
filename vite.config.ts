@@ -3,22 +3,15 @@ import react from '@vitejs/plugin-react-swc'
 import path from 'path'
 
 export default defineConfig({
-  // ВАЖНО: Название вашего репозитория
+  // Убедитесь, что название репозитория в ссылке совпадает с этим:
   base: '/Englishcoursefigma/',
-
   plugins: [react()],
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
   build: {
-    target: 'esnext',
     outDir: 'dist',
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
+  }
 })
