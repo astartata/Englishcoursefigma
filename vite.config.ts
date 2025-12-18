@@ -3,8 +3,9 @@ import react from '@vitejs/plugin-react-swc'
 import path from 'path'
 
 export default defineConfig({
-  // Проверьте, что имя репозитория в ссылке совпадает с этим:
+  // ВАЖНО для GitHub Pages:
   base: '/Englishcoursefigma/',
+
   plugins: [react()],
   resolve: {
     alias: {
@@ -12,6 +13,7 @@ export default defineConfig({
     },
   },
   build: {
+    target: 'esnext',
     outDir: 'dist',
-  }
+  },
 })
