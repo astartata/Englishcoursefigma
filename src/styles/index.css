@@ -2,35 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Принудительные стили для фона, если Tailwind не подхватился */
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: #0a0e27 !important; /* Темно-синий фон */
-  color: #ffffff !important;
-  min-height: 100vh;
+body {
+  background-color: #0a0e27 !important;
+  color: white !important;
+  font-family: sans-serif;
+  padding: 20px;
 }
 
-#root {
-  background-color: #0a0e27;
+/* Оформление заголовков */
+h1, h2 { color: #f59e0b; margin-top: 30px; }
+
+/* ТЕ САМЫЕ КАРТОЧКИ С РАМКАМИ (как на втором скрине) */
+div[class*="group"], .card, section > div > div {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  margin: 10px 0 !important;
 }
 
-/* Кнопка "Записаться" как в макете */
+/* Кнопка записи */
 button, .cta-button {
   background: linear-gradient(90deg, #14b8a6, #f59e0b) !important;
-  color: #000 !important;
-  border-radius: 50px;
-  border: none;
-  padding: 12px 30px;
+  color: black !important;
+  border-radius: 50px !important;
+  padding: 12px 30px !important;
   font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
-}
-
-/* Стиль карточек */
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(20, 184, 166, 0.2);
-  border-radius: 16px;
-  padding: 20px;
+  border: none;
 }
