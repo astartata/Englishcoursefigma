@@ -5,34 +5,40 @@
 body {
   background-color: #0a0e27 !important;
   color: white !important;
-  font-family: 'Inter', sans-serif;
   margin: 0;
-  padding: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Контейнер для центрирования сайта */
 #root {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 40px 20px;
 }
 
-/* Делаем карточки в ряд (сетка) */
-section > div, 
-.grid {
+/* ЗАГОЛОВКИ: они будут стоять отдельно над карточками */
+h2, .section-title {
+  width: 100% !important;
+  color: #f59e0b !important;
+  font-size: 1.8rem;
+  margin: 40px 0 20px 0 !important;
+  grid-column: 1 / -1; /* Заставляет заголовок занимать всю ширину в сетке */
+}
+
+/* СЕТКА: Настраиваем так, чтобы заголовки не попадали в карточки */
+section, .grid-container {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important;
   gap: 20px !important;
-  margin-top: 20px;
+  align-items: start;
 }
 
-/* Оформление самих карточек */
-div[class*="group"], 
-.card, 
-section > div > div {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+/* КАРТОЧКИ: теперь в них будет только основной контент */
+div[class*="group"], .card, section > div > div {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(20, 184, 166, 0.25) !important;
   border-radius: 16px !important;
   padding: 24px !important;
+  height: 100%;
 }
 
 /* Кнопка */
