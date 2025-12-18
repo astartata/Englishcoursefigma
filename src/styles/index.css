@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Принудительные стили для фона, если Tailwind не подхватился */
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #0a0e27 !important; /* Насыщенный темно-синий */
+  background-color: #0a0e27 !important; /* Темно-синий фон */
   color: #ffffff !important;
   min-height: 100vh;
 }
@@ -14,12 +15,22 @@ html, body {
   background-color: #0a0e27;
 }
 
-/* Золотистая кнопка из промпта */
+/* Кнопка "Записаться" как в макете */
 button, .cta-button {
   background: linear-gradient(90deg, #14b8a6, #f59e0b) !important;
   color: #000 !important;
   border-radius: 50px;
   border: none;
-  padding: 10px 25px;
+  padding: 12px 30px;
   font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+}
+
+/* Стиль карточек */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  border-radius: 16px;
+  padding: 20px;
 }
