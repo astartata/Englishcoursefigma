@@ -6,32 +6,41 @@ body {
   background-color: #0a0e27 !important;
   color: white !important;
   margin: 0;
+  font-family: sans-serif;
+}
+
+/* Контейнер для центрирования всего сайта */
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 40px 20px;
 }
 
-/* Сетка для карточек (2 в ряд на ПК) */
-section div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+/* СЕТКА: Делаем карточки в ряд (2 колонки) */
+section > div, 
+div[class*="grid"] {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 20px !important;
+  margin-top: 20px;
 }
 
-/* Сами карточки (как на вашем макете) */
-div[class*="group"], .card, [role="region"] > div > div {
-  flex: 1 1 45%;
+/* САМИ КАРТОЧКИ: Рамки и фон */
+div[class*="group"], 
+.card, 
+section > div > div {
   background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(20, 184, 166, 0.3) !important;
   border-radius: 16px !important;
   padding: 24px !important;
-  min-width: 300px;
 }
 
-/* Кнопка */
+/* КНОПКА: Наводим блеск */
 button, .cta-button {
   background: linear-gradient(90deg, #14b8a6, #f59e0b) !important;
-  color: #000 !important;
+  color: black !important;
   font-weight: bold;
-  padding: 14px 32px;
+  padding: 12px 30px;
   border-radius: 50px;
   border: none;
   cursor: pointer;
